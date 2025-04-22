@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 0.2rem;
+}
+
+.wrapper {
+  margin: 10rem auto;
+  max-width: 20rem;
+  border: 3px solid black;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+}
+
+.header {
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  margin-left: 0.6rem;
+}
+
+.language-picker {
+  margin: 1rem auto;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  border: 2px solid black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.repo-info {
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.4rem;
+  border: 2px solid black;
+}
+
+.repo-info p {
+  font-size: smaller;
+  color: rgb(109, 109, 109);
+  margin: 0.6rem auto;
+}
+
+.repo-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.repo-stats li {
+  display: flex;
+  align-items: center;
+}
+
+.repo-stats li span {
+  margin-left: 0.3rem;
+}
+
+.language-color {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+  background: yellow;
+  display: inline-block;
+}
+
+.refresh-button {
+  background: #000;
+  color: white;
+  width: 100%;
+  padding: 0.6rem 0;
+  margin-top: 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.loading::after {
+  content: "Loading, please wait";
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: "Loading, please wait";
+  }
+  25% {
+    content: "Loading, please wait.";
+  }
+  50% {
+    content: "Loading, please wait..";
+  }
+  75% {
+    content: "Loading, please wait...";
+  }
+}
+
+/* handling different states */

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+    <title>Random Github Repository finder</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <header class="header">
+          <i class="fa-brands fa-github" style="font-size: 20px"></i>
+          <h1>GitHub Repository Finder</h1>
+        </header>
+        <main>
+          <select name="language" id="language" class="language-picker">
+            <!-- <option value="">All languages</option> -->
+          </select>
+
+          <!-- Non empty -->
+
+          <section class="repo-info hidden active-state">
+            <h2 class="repo-name">driver.js</h2>
+            <p class="repo-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quo
+              voluptates fugit quibusdam dolor hic, natus eligendi voluptatum
+              distinctio recusandae!
+            </p>
+            <ul class="repo-stats">
+              <li>
+                <div class="language-color"></div>
+                <span class="repo-language">Javascript</span>
+              </li>
+              <li>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <span class="repo-stars"> 24, 442</span>
+              </li>
+              <li>
+                <i class="fa fa-code-fork" aria-hidden="true"></i>
+                <span class="repo-forks"> 1, 456</span>
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-circle-exclamation"
+                  aria-hidden="true"
+                ></i>
+                <span class="repo-issues"> 24,442</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Empty state -->
+
+          <section
+            class="repo-info empty-state"
+            style="background: rgb(220, 220, 220)"
+          >
+            <p style="color: black; text-align: center; font-weight: 600">
+              Please select a language
+            </p>
+          </section>
+
+          <!-- Loading state -->
+
+          <section
+            class="repo-info hidden loading-state"
+            style="background: rgb(220, 220, 220)"
+          >
+            <p
+              class="loading"
+              style="color: black; text-align: center; font-weight: 600"
+            ></p>
+          </section>
+
+          <!-- Error state -->
+
+          <section
+            class="repo-info hidden error-state"
+            style="background: rgb(250, 155, 155); border: none"
+          >
+            <p
+              style="color: rgb(66, 0, 0); text-align: center; font-weight: 600"
+            >
+              Error fetching a repository, please refresh..
+            </p>
+          </section>
+
+          <button class="refresh-button hidden">Refresh</button>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
